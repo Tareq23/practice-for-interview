@@ -5,7 +5,12 @@ public class FindSubsets {
 	
 	public static void findSubset(String str, String ans, int i) {
 		if(i == str.length()) {
-			System.out.println(ans);
+			if(ans.isEmpty()) {
+				System.out.println("null");
+			}
+			else {
+				System.out.println(ans);				
+			}
 			return;
 		}
 		findSubset(str, ans+str.charAt(i), i+1);
