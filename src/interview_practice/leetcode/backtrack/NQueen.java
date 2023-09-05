@@ -84,7 +84,7 @@ public class NQueen {
 		}
 		
 		nQueens(board, 0);
-		System.out.println("Possible board for nQueen :"+count);
+		System.out.println("total ways to solve nqueen problem :"+count);
 		
 		sc.close();
 	}
