@@ -6,5 +6,15 @@ public interface FuncationalInterfaceDemo {
 	
 	
 	void singleAbstractMethod();
+	
+	
+	
+	default void addTo() {
+		
+	}
+	
+	default void addTo(int a) {
+		
+	}
 
 }
