@@ -112,7 +112,20 @@ public class ArraysProblem {
 		 * string with odd lengths 
 		 */
 		
+		List<Department> deptList;
+		
 		
 	}
 
+}
+
+class Department{
+	Long id;
+	String name;
+	
+	public Department() {}
+	public Department(Long id, String name) {
+		this.id = id;
+		this.name = name;
+	}
 }
