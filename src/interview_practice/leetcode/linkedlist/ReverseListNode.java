@@ -1,4 +1,4 @@
-package interview_practice.collection.list;
+package interview_practice.leetcode.linkedlist;
 
 public class ReverseListNode {
 	
