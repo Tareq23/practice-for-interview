@@ -18,9 +18,28 @@ class child2 extends parentClass{
 	
 }
 
+class check extends AbstractDemo{
+
+	@Override
+	public void method1() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
 
 
 public class ImpAbstract extends AbstractDemo{
+	
+	private String impAbstractChecking;
+
+	public ImpAbstract(String title) {
+		
+		super(title);
+		this.impAbstractChecking = title;
+		// TODO Auto-generated constructor stub
+	}
 
 	public int sum(int a, long b) {
 		System.out.println("flag0");
@@ -57,7 +76,7 @@ public class ImpAbstract extends AbstractDemo{
 		System.out.println("obj2 "+obj2.sum(2, 2));
 		
 		
-		ImpAbstract obj1 = new ImpAbstract();
+		ImpAbstract obj1 = new ImpAbstract("Ok checking");
 		
 		obj1.checkPrime(10);
 		

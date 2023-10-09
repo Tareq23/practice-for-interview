@@ -16,6 +16,8 @@ public class ListSetSize {
 		int n = sc.nextInt();
 		List<List<String>> board = new ArrayList<>();
 		
+		
+		
 		for(int i=0; i<n; i++) {
 			board.add(Arrays.asList(new String[n]));
 		}

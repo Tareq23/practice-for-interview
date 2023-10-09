@@ -1,4 +1,4 @@
-package interview_practice.solid_principle.OpenClosedPrinciple;
+package interview_practice.solid_principle.OCP;
 
 
 
@@ -23,6 +23,28 @@ public class Employee {
 		System.out.println("Employee id: "+this.id+" , Employee Name: "+this.name);
 	}
 
+
+	public int getId() {
+		return id;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	
+	
 
 	
 

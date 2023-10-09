@@ -48,6 +48,8 @@ public class CheckValidBracketExpression {
 			
 		}
 		
+		
+		
 		if(!isValid) {
 			System.out.println("Invalid bracket expression");
 		}

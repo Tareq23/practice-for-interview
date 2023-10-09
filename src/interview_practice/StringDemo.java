@@ -7,6 +7,9 @@ public class StringDemo {
 	public static void main(String[] args) {
 		String s1 = new String("code");
 		
+		
+		char chArr[] = s1.toCharArray();
+		
 		s1.intern();
 		String s2 = "code";
 		
@@ -59,6 +62,13 @@ public class StringDemo {
 		System.out.println("string builder : "+sb2);
 		
 		
+		String subS = "tareq";
+		
+		System.out.println("substring: "+subS.substring(0));
+		System.out.println("substring: "+subS.substring(0, 1));
+		System.out.println("substring: "+subS.substring(0, 2));
+		System.out.println("substring: "+subS.substring(2, subS.length()));
+		System.out.println(subS.charAt(0));
 		
 		
 	}

@@ -1,6 +1,6 @@
 package interview_practice.solid_principle;
 
-import interview_practice.solid_principle.OpenClosedPrinciple.TraineeEmployee;
+import interview_practice.solid_principle.OCP.TraineeEmployee;
 import interview_practice.solid_principle.SRP.Address;
 import interview_practice.solid_principle.SRP.Employee;
 
@@ -82,10 +82,54 @@ import interview_practice.solid_principle.SRP.Employee;
  *  - Example - created a pojo employee with id, name. now new functionality comes which says add Training location. your constructor will fail for employees who
  *    didn't do training. better extend employee class, name it Traineed employee then add constructor.
  * 
+ * 
+ * ----------------------------------------------   Liskov Substitution Principle   ---------------------------------------------------------------
  *    
+ *    It applies to inheritance in such a way that the derived classes must be completely substitutable for their base classes. In other words, if class A is
+ *    a subtype of class B, then we should be able to replace B with A without interrupting the behavior of the program.
  *       
- *      
+ * 1. What is Liskov Substitution Principle?
+ *    -It states that "LSP states that the software should not alter the desirable results when we replace a parent type with any of the subtypes." or "Derived types
+ *    must be completely substitutable for their base types"
  *    
+ *    -LSP means that the classes, fellow developers created by extending our class, should be able to fit in application without failure. This is important when
+ *     we resort to polymorphic behavior through inheritance.
+ *    -take previous example, print employee from child or parent reference print all required details
+ *    -This requires the objects of the subclasses to behave in the same way as the objects of the superclass. This is mostly seen in place where we do runtime type
+ *     identification and then cast it to appropriate reference type.
+ *     
+ * 2. Why is Liskov Substitution Principle Important?
+ * 
+ *    - This avoids misusing inheritance.
+ *    - It helps us conform to the "is-a" relationship
+ *    - We can also say that subclasses must fulfill a contract defined by the base class.
+ *    
+ *    Wrongly implementing it can prove real world objects wrong like:
+ *    "Square is a Rectangle", it is not in real world but its easy to implement through code. To prevent this Better use this principle
+ *    
+ * 
+ * 
+ * --------------------------------------------   Interface Segregation Principle  --------------------------------
+ * 
+ *  1. What is Interface Segregation?
+ *  
+ *     - It states that "Clients should not be forced to implement unnecessary methods which they will not use.
+ *     - Interface Segregation Principle is applicable to interface as a Single Responsibility Principle holds to classes
+ *     - ISP states that we should split our interface into smaller and more specific ones
+ *     
+ *  2. Why is Interface Segregation Principle Important?
+ *  
+ *     - To prevent client from unnecessary getting stuck in implementing unwanted methods
+ *     
+ *  ------------------------------------  Dependency Inversion Principle  -----------------------------
+ *  
+ *  
+ *  1. What is Dependency Inversion Principle?
+ *  
+ *     - It states that "Depend on abstractions, not on concretion"
+ *     - We should design our principle in such a way that various modules can be separated from each other using an abstract layer to behind 
+ *       them together.
+ *     - High level modules should not depend on the low-level module but both should depend on the abstraction.
  * 
  * 
  * 
@@ -101,11 +145,11 @@ public class SolidPrincipleDemo {
 		// SRP 
 		
 		Employee emp = new Employee(1,"Md Tarequl Islam", new Address("Dhaka-1209","Bhola-Daulatkhan","Bangladesh","Dhaka"));
-//		System.out.println(emp.toString());
+		System.out.println(emp.toString());
 		
 		// Open / Closed principle
 		
-		interview_practice.solid_principle.OpenClosedPrinciple.Employee emp1 = new interview_practice.solid_principle.OpenClosedPrinciple.Employee(1,"Tareq");
+		interview_practice.solid_principle.OCP.Employee emp1 = new interview_practice.solid_principle.OCP.Employee(1,"Tareq");
 		
 		emp1.printMe();
 		
@@ -113,8 +157,22 @@ public class SolidPrincipleDemo {
 		
 		tEmp.printMe();
 		
+		// Liskov Substitution Principle
 		
+		interview_practice.solid_principle.OCP.Employee lspEmp = new TraineeEmployee(0, "Md", "ofline");
+		
+		useMeToPrintEmployee(tEmp);
+		lspEmp.printMe();
 
 	}
+	
+	public static void useMeToPrintEmployee(interview_practice.solid_principle.OCP.Employee e)
+	{
+		System.out.println("LSP example: useMeToPrintEmployee:");
+		e.printMe();
+	}
+	
+	
+	
 
 }

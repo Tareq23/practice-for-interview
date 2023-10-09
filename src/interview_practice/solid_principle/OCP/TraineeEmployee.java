@@ -1,4 +1,4 @@
-package interview_practice.solid_principle.OpenClosedPrinciple;
+package interview_practice.solid_principle.OCP;
 
 public class TraineeEmployee extends Employee{
 	
@@ -8,6 +8,12 @@ public class TraineeEmployee extends Employee{
 		
 		super(id, name);
 		this.traineePlace = traineePlace;
+	}
+	
+	public void printMe() {
+		
+		System.out.println("Employee id: "+super.getId()+" , Employee Name: "+super.getName()+" , Trainee Place: "+this.traineePlace);
+		
 	}
 	
 	
