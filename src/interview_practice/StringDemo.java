@@ -1,11 +1,38 @@
 package interview_practice;
 
+import java.util.stream.Stream;
+
+
+
 public class StringDemo {
 
 	
 	
+	public static void split() {
+		
+//		String str = "//home/out/home//";
+		String str = "/dn/a/./b/./c/./d///";
+		
+		String strArr[] = str.split("/");
+		
+		System.out.println(strArr.length);
+		final int temp=0;
+		Stream.of(strArr).forEach(e -> System.out.println(e+" => "+temp));
+		
+	}
+	
+	
 	public static void main(String[] args) {
-		String s1 = new String("code");
+		
+		
+		
+		
+		split();
+		
+		
+		
+		
+/*		String s1 = new String("code");
 		
 		
 		char chArr[] = s1.toCharArray();
@@ -68,7 +95,7 @@ public class StringDemo {
 		System.out.println("substring: "+subS.substring(0, 1));
 		System.out.println("substring: "+subS.substring(0, 2));
 		System.out.println("substring: "+subS.substring(2, subS.length()));
-		System.out.println(subS.charAt(0));
+		System.out.println(subS.charAt(0));*/
 		
 		
 	}
