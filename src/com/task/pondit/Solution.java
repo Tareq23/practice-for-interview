@@ -1,6 +1,6 @@
 package com.task.pondit;
 
-import java.util.stream.Stream;
+
 
 /*
  
@@ -46,7 +46,15 @@ import java.util.stream.Stream;
 
 20. Find Minimum and Maximum: Write a program to find the minimum and maximum values in an array.
  
- 
+21. Calculate the simple interest for given principal, rate of interest, and time.
+
+22. Write a program to convert temperatures from Celsius to Fahrenheit and vice versa.
+
+23. Write a program that checks whether the input character is an uppercase letter, lowercase letter, a digit, or a special 24. character.
+
+24. Write a program to find the second largest number in a given array.
+
+25. Given a string containing both letters and numbers, find the sum of all the numbers in the string.
  
  
  * */
@@ -56,45 +64,45 @@ public class Solution {
 	public static void main(String[] args) {
 
 		int[] arrayForSum = { 2, 4, 62, 14, 5 };
-		System.out.println("Sum of Array Elements: " + sumOfAllElements(arrayForSum));
-		System.out.println("Largest Element in Array: " + largestElementOfArray(arrayForSum));
+		System.out.println("1) Sum of Array Elements: " + sumOfAllElements(arrayForSum));
+		System.out.println("2) Largest Element in Array: " + largestElementOfArray(arrayForSum));
 
 		int num = 23;
-		System.out.println("Even or Odd Numbers: " + evenOrOdd(num));
+		System.out.println("3) Even or Odd Numbers: " + evenOrOdd(num));
 
 		int[] reverseArray = reverseArray(arrayForSum);
-		System.out.print("Reverse an Array: ");
+		System.out.print("4) Reverse an Array: ");
 		for (int i = 0; i < reverseArray.length; i++) {
 			System.out.print(reverseArray[i] + " ");
 		}
 		System.out.println();
 
-		System.out.println("Factorial Calculation: " + factorialCalculation(5));
+		System.out.println("5) Factorial Calculation: " + factorialCalculation(5));
 
 //		char[] palindromeCharArray = {'a','a','b','a','a'};
 		char[] palindromeCharArray = { 'a', 'b', 'c', 'e', 'b', 'a' };
-		System.out.println("Is above character array palindrome?: " + palindromeCheck(palindromeCharArray));
+		System.out.println("6) Is above character array palindrome?: " + palindromeCheck(palindromeCharArray));
 
 		int primeCheckNumber = 42;
-		System.out.println("Is " + primeCheckNumber + " prime: " + primeCheck(primeCheckNumber));
+		System.out.println("7) Is " + primeCheckNumber + " prime: " + primeCheck(primeCheckNumber));
 
 		int fibonacciNumber = 20;
-		System.out.print("Fibonacci Series: ");
+		System.out.print("8) Fibonacci Series: ");
 		fibonacciSeries(fibonacciNumber);
 		System.out.println();
 
 		int linearSearchValue = 23;
 		int[] linearSearchArray = { 43, 24, 5, 3, 12, 34, 23, 67 };
-		System.out.println("Is " + linearSearchValue + " exists in above linear search array: "
+		System.out.println("9) Is " + linearSearchValue + " exists in above linear search array: "
 				+ linearSearch(linearSearchArray, linearSearchValue));
 
 		int binarySearchValue = 35;
 		int[] binarySearchArray = { 3, 5, 12, 23, 24, 34, 43, 67 };
-		System.out.println("Is " + binarySearchValue + " exists in above binary search array: "
+		System.out.println("10) Is " + binarySearchValue + " exists in above binary search array: "
 				+ binarySearch(binarySearchArray, binarySearchValue));
 
 		int[] duplicateValueArray = { 13, 15, 12, 23, 24, 34, 13, 67 };
-		System.out.println("Have any duplicate Elements: " + isExistsDuplicateValue(duplicateValueArray));
+		System.out.println("11) Have any duplicate Elements: " + isExistsDuplicateValue(duplicateValueArray));
 
 		String vowelConsonantString = "countvowelandconsonant";
 		countVowelAndConsonant(vowelConsonantString);
@@ -106,27 +114,48 @@ public class Solution {
 		int[][] mat2 = { { 2, 3, 4, 5, 6 }, { 2, 3, 4, 5, 1 }, { 3, 4, 6, 7, 2 }, { 4, 5, 2, 1, 4 },
 				{ 1, 2, 4, 5, 6 } };
 
-		System.out.println("Matrix Addition: ");
+		System.out.println("14) Matrix Addition: ");
 		matrixAddition(mat1, mat2);
 
 		int[] averageArray = { 3, 4, 5, 6, 7, 21, 2, 3 };
-		System.out.println("Average Calculate: " + averageCalculate(averageArray));
+		System.out.println("15) Average Calculate: " + averageCalculate(averageArray));
 
 		int year = 2098;
 
-		System.out.println("Is " + year + " leap year: " + isLeapYear(year));
+		System.out.println("16) Is " + year + " leap year: " + isLeapYear(year));
 
-		System.out.println("Pattern: ");
+		System.out.println("17) Pattern: ");
 		patternPrint(5);
 
 		String reverseString = "apple";
-		System.out.println("Reverse of \"" + reverseString + "\" String: " + reverseString(reverseString));
+		System.out.println("18) Reverse of \"" + reverseString + "\" String: " + reverseString(reverseString));
 
 		int armstrong = 407;
-		System.out.println("Is \""+armstrong+"\" armstrong number: "+armstrongNumber(armstrong));
+		System.out.println("19) Is \""+armstrong+"\" armstrong number: "+armstrongNumber(armstrong));
 		
 		int[] arrayForMaxMin = { 3, 4, 512, -3, 5 };
 		maxMinValue(arrayForMaxMin);
+		
+		double principal = 2342;
+		double rate = 34; 
+		double time = 453;
+		System.out.println("21) simple interest: "+simpleInterestCalculate(principal, rate, time));
+		
+		
+		double temperature = 34;
+		convertCelsiusFahrenheit(temperature);
+		
+		
+		
+		char checkChar = 'a';
+		System.out.println("23) "+checkChar+" is an Uppercase , lowercase or digit: "+charCheck(checkChar));
+		
+		int[] array2ndMax = {3,4,52,1,3,5,23, 12, 51};
+		System.out.println("24) second largest number: "+find2ndMax(array2ndMax));
+		
+		String findSumOfNumber = "kjdf3323kj232kj23232343j2323kkj323";
+		System.out.println("25) Sum of all the numbers from \""+findSumOfNumber+"\": "+findSumFromStringDigit(findSumOfNumber));
+		
 	}
 
 	public static int sumOfAllElements(int[] ar) {
@@ -280,12 +309,12 @@ public class Solution {
 		}
 
 		System.out.println(
-				"\"" + str + "\" in this string have " + vowelCnt + " vowels and " + consonantCnt + " consonants");
+				"12) \"" + str + "\" in this string have " + vowelCnt + " vowels and " + consonantCnt + " consonants");
 	}
 
 	public static void multiplicationTable(int n) {
 
-		System.out.println("Multiplication Table for " + n + ":");
+		System.out.println("13) Multiplication Table for " + n + ":");
 		for (int i = 1; i <= 10; i++) {
 			System.out.println(n + " x " + i + " = " + (n * i));
 		}
@@ -365,7 +394,69 @@ public class Solution {
 				min = num[i];
 		}
 
-		System.out.println("Max: " + max + "; Min: " + min);
+		System.out.println("20) Max: " + max + "; Min: " + min);
+	}
+	
+	public static double simpleInterestCalculate(double principal, double rate, double time)
+	{
+		return (principal * rate * time)/100;
+	}
+	
+	public static int find2ndMax(int[] ar)
+	{
+		int firstMax = ar[0];
+		int secondMax = Integer.MIN_VALUE;
+		
+		for(int i = 1; i < ar.length; i++)
+		{
+			if(ar[i] > firstMax) {
+				secondMax = firstMax;
+				firstMax = ar[i];
+			}
+			
+			if(ar[i] < firstMax && ar[i] > secondMax) {
+				secondMax = ar[i];
+			}
+		}
+		return secondMax;
 	}
 
+	
+	public static String charCheck(char ch) {
+		
+		if(ch >= 'a' && ch <= 'z') {
+			return "lowercase";
+		}
+		else if(ch >= 'A' && ch <= 'Z') return "uppercase";
+		
+		else if(ch >= '0' && ch <= '9')  return "digit";
+		
+		return "don't know";
+		
+	}
+
+	public static void convertCelsiusFahrenheit(double temperature) {
+		
+		double celsius = ((double) 9 / 5 * temperature) + 32;
+		double fahrenheit = (double) 5 / 9 * (temperature - 32);
+		
+		System.out.println("22) "+temperature+" temperature: "+celsius+" celsius and "+fahrenheit+"Fahrenheit");
+	}
+	
+	public static int findSumFromStringDigit(String str)
+	{
+		int sum = 0;
+		
+		for(int i = 0; i < str.length(); i++)
+		{
+			char ch = str.charAt(i);
+			
+			if(ch >= '0' && ch <= '9') {
+				sum += (ch - '0');
+			}
+		}
+		
+		return sum;
+	}
+	
 }
