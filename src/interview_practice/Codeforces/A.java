@@ -9,18 +9,14 @@ public class A {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int x = sc.nextInt();
-		
-		if((x & 1) == 1 || x == 2) {
-			System.out.println("NO");
+		int a = sc.nextInt(), b = sc.nextInt();
+		int cnt = 0;
+		while(a <= b) {
+			a = a * 3;
+			b = b * 2;
+			cnt++;
 		}
-		else {
-			System.out.println("YES");
-		}
-		
-		
-//		System.out.println(res);
-		
+		System.out.println(cnt);
 	}
 
 }
