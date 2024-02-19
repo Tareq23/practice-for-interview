@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+
 public class BinaryTreeDemo {
 	
 	
@@ -21,6 +22,29 @@ public class BinaryTreeDemo {
 	}
 	
 	static int idx=-1;
+	
+	private static Node buildTree(List<Integer> list) {
+		int index = 0;
+		Node root = new Node(list.get(index++));
+		Queue<Node> queue = new LinkedList<>();
+		queue.add(root);
+		while(!queue.isEmpty() && index < list.size()) {
+			Node node = queue.poll();
+			
+			if(index<list.size() && list.get(index) != null) {
+				node.left = new Node(list.get(index));
+				queue.add(node.left);
+			}
+			index++;
+			if(index<list.size() && list.get(index) != null) {
+				node.right = new Node(list.get(index));
+				queue.add(node.right);
+			}
+			index++;
+		}
+		return root;
+	}
+	
 	
 	public static Node buildTreeInPreorder(int nodes[])
 	{

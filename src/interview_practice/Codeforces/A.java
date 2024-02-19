@@ -8,15 +8,23 @@ public class A {
 		
 		
 		Scanner sc = new Scanner(System.in);
-		
-		int a = sc.nextInt(), b = sc.nextInt();
-		int cnt = 0;
-		while(a <= b) {
-			a = a * 3;
-			b = b * 2;
-			cnt++;
+		long num = sc.nextLong();
+		boolean flag = true;
+		while(num>0)
+		{
+			long temp = num % 10;
+			num /= 10;
+			if(temp == 4 || temp == 7) {
+				continue;
+			}
+			flag = false;
 		}
-		System.out.println(cnt);
+		if(flag) {
+			System.out.println("YES");
+		}
+		else {
+			System.out.println("NO");
+		}
 	}
 
 }

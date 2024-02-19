@@ -11,25 +11,28 @@ public class TubeTubeFeed {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int res = 0;
+		int num = sc.nextInt();
+		int k = sc.nextInt();
 		
-		int[][] mat = new int[5][5];
-		int row = 0, col = 0;
-		for(int i = 0; i < 5; i++)
-		{
-			for(int j = 0; j < 5; j++)
-			{
-				mat[i][j] = sc.nextInt();
-				
-				if(mat[i][j] == 1)
-				{
-					row = i;
-					col = j;
+		while(k>0) {
+			int temp = num % 10;
+			if(temp == 0) {
+				num = num / 10;
+				k--;
+			}
+			else {
+				if(temp < k) {
+					k -= temp;
+					num -= temp;
+				}
+				else {
+					num -= k;
+					k  = 0;
 				}
 			}
 		}
-		if(col <= row)
-		System.out.println(Math.abs(row-col));
+		System.out.println(num);
+		
 	}
 }
  

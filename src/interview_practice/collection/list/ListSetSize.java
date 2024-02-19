@@ -7,25 +7,31 @@ import java.util.Scanner;
 
 public class ListSetSize {
 
-	
-	
-	public static void main(String[] args) {
-		
+	public static void setSize() {
 		Scanner sc = new Scanner(System.in);
-		
+
 		int n = sc.nextInt();
 		List<List<String>> board = new ArrayList<>();
-		
-		
-		
-		for(int i=0; i<n; i++) {
+
+		for (int i = 0; i < n; i++) {
 			board.add(Arrays.asList(new String[n]));
 		}
-		
-		System.out.println("checking size :"+board.size());
-		
+
+		System.out.println("checking size :" + board.size());
+
 		sc.close();
-		
+
+	}
+
+	public static void referenceCheck(List<Integer> list) {
+		list.add(4);
 	}
 	
+	public static void main(String[] args) {
+		List<Integer> arList = new ArrayList<>();
+		System.out.println(arList.size());
+		referenceCheck(arList);
+		System.out.println(arList.size());
+	}
+
 }
