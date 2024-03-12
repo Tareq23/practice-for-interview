@@ -1,4 +1,4 @@
-package interview_practice.graph.binaryTree;
+package interview_practice.tree;
 
 import java.util.ArrayList;
 import java.util.HashMap;

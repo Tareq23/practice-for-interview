@@ -29,9 +29,21 @@ public class ListSetSize {
 	
 	public static void main(String[] args) {
 		List<Integer> arList = new ArrayList<>();
+		
+		for(int i = 0; i < 5; i++)
+		{
+			arList.add(i, i*i);
+		}
 		System.out.println(arList.size());
-		referenceCheck(arList);
+//		referenceCheck(arList);
+		
+		arList.add(0, 45);
 		System.out.println(arList.size());
+		
+		for(Integer value : arList) {
+			System.out.print(value+" : ");
+		}
+		System.out.println();
 	}
 
 }

@@ -1,7 +1,8 @@
-package interview_practice.graph.binaryTree;
+package interview_practice.tree;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 class TreeNode {
 	int val;
@@ -40,6 +41,26 @@ public class BinaryTreeMain {
 	
 	public static void insert(List<Integer> list) {
 		
+	}
+	
+	public List<Integer> inorderTraversal(TreeNode root) {
+//		Stack<TreeNode> stack = new Stack<>();
+	    List<Integer> list = new ArrayList<>();
+	    if(root == null) return list;
+	    
+	    Stack
+	    
+	    while(root != null || !stack.empty()){
+	        while(root != null){
+	            stack.push(root);
+	            root = root.left;
+	        }
+	        root = stack.pop();
+	        list.add(root.val);
+	        root = root.right;
+	        
+	    }
+	    return list;
 	}
 	
 	public static void main(String[] args) {

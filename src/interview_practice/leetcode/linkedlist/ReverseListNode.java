@@ -12,6 +12,19 @@ public class ReverseListNode {
 		}
 	}
 	
+	public static ListNode reverse(ListNode node)
+	{
+		ListNode curr = null, prev = null, next = null;
+//		1 -> 2 -> 3 -> 4
+		while(node != null)
+		{
+			curr = node;
+			curr.next = prev;
+			prev = curr;
+			node = node.next;
+		}
+		return prev;
+	}
 	
 	public static void main(String[] args)
 	{
@@ -36,24 +49,24 @@ public class ReverseListNode {
 		node7.next = node8;
 		node8.next = node9;
 		boolean flag=false;
-		ListNode prev=null,curr=null;
+//		ListNode prev=null,curr=null;
+//		
+//		
+//		while(head != null)
+//		{
+//			curr = head;
+//			head = head.next;
+//			if(prev == null)
+//			{
+//				prev = curr;
+//				prev.next=null;
+//			}else {
+//				curr.next = prev;
+//				prev = curr;
+//			}
+//		}
 		
-		
-		while(head != null)
-		{
-			curr = head;
-			head = head.next;
-			if(prev == null)
-			{
-				prev = curr;
-				prev.next=null;
-			}else {
-				curr.next = prev;
-				prev = curr;
-			}
-		}
-		
-		head = prev;
+		head = reverse(head);
 		
 		while(head != null) {
 			System.out.print(head.data+", ");
