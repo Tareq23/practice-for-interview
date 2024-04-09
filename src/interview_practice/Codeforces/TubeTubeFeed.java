@@ -11,27 +11,33 @@ public class TubeTubeFeed {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int num = sc.nextInt();
-		int k = sc.nextInt();
-		
-		while(k>0) {
-			int temp = num % 10;
-			if(temp == 0) {
-				num = num / 10;
-				k--;
+		int n = sc.nextInt();
+		int x = sc.nextInt();
+		int distress = 0;
+		for(int i = 0; i < n; i++)
+		{
+//			String str = sc.next();
+//			String[] ss = str.split(" ");
+			
+			char op = sc.next().charAt(0);
+			int d = sc.nextInt();
+			
+			if(op == '+') {
+				x += d;
 			}
 			else {
-				if(temp < k) {
-					k -= temp;
-					num -= temp;
+				if(x >= d) {
+					x -= d;
 				}
 				else {
-					num -= k;
-					k  = 0;
+					distress++;
 				}
 			}
+			
 		}
-		System.out.println(num);
+		
+		System.out.print(x+" "+distress);
+		
 		
 	}
 }

@@ -4,27 +4,30 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
 
-	TreeNode() {
-	}
-
-	TreeNode(int val) {
-		this.val = val;
-	}
-
-	TreeNode(int val, TreeNode left, TreeNode right) {
-		this.val = val;
-		this.left = left;
-		this.right = right;
-	}
-}
 
 public class BinaryTreeMain {
 
+	private static class TreeNode {
+		int val;
+		TreeNode left;
+		TreeNode right;
+
+		TreeNode() {
+		}
+
+		TreeNode(int val) {
+			this.val = val;
+		}
+
+		TreeNode(int val, TreeNode left, TreeNode right) {
+			this.val = val;
+			this.left = left;
+			this.right = right;
+		}
+	}
+	
+	
 	static List<Integer> list;
 	
 	public static void traverse(TreeNode root) {
@@ -48,7 +51,7 @@ public class BinaryTreeMain {
 	    List<Integer> list = new ArrayList<>();
 	    if(root == null) return list;
 	    
-	    Stack
+	    Stack<TreeNode> stack = new Stack<>();
 	    
 	    while(root != null || !stack.empty()){
 	        while(root != null){
