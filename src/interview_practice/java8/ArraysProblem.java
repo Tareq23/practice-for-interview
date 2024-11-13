@@ -14,6 +14,7 @@ public class ArraysProblem {
 		int secondElement = Arrays.stream(nums)
 								   .distinct()
 								   .sorted()
+								   
 								   .skip(1)
 								   .findFirst()
 								   .orElseThrow(() -> new IllegalArgumentException("Array does not have a second smallest element"));

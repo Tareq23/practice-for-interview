@@ -1,10 +1,25 @@
 package interview_practice;
 
+import java.util.ArrayList;
+
 public class Checking {
 	
 	
 	
 	public static void main(String[] args) {
+		
+		
+		ArrayList list = new ArrayList();
+		
+		list.add(2);
+		list.add(4);
+		list.add(5.4f);
+		
+		Integer sum = 0;
+		for(int i = 0; i < list.size(); i++) {
+			sum += (Math.round((float)list.get(i)));
+			System.out.println(list.get(i));
+		}
 		
 		int ar[] = {4,5,6,2,10,4,8};
 		

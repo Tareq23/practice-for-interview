@@ -13,6 +13,9 @@ public class SubString {
 		
 		
 		String str = "23456789293848929292";
+		str = str.concat("djfdkfj");
+		
+		System.out.println(str);
 		
 	}
 
